@@ -4,14 +4,14 @@ from tkinter import messagebox
 def login():
     if usernameEntry.get()=='' or passwordEntry.get()=='':
         messagebox.showerror("Error","All fields are required")
-    elif usernameEntry.get()=='root'and passwordEntry.get()=="qwerasdf qasim":
+    elif usernameEntry.get()=='root'and passwordEntry.get()=="12345":
         messagebox.showinfo("Success","Login Successful")
         root.destroy()
         import ems
     else:
         messagebox.showerror("Error","User Doesn't exists")
 root = CTk()
-root.geometry('930x478')
+root.geometry('930x478+100+100')
 root.resizable(0,0)
 root.title("Login Page")
 image  = CTkImage(Image.open("banner.png"),size=(930,478))

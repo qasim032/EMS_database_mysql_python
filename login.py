@@ -1,10 +1,11 @@
 from customtkinter import *
 from PIL import Image
 from tkinter import messagebox
+import database
 def login():
     if usernameEntry.get()=='' or passwordEntry.get()=='':
         messagebox.showerror("Error","All fields are required")
-    elif usernameEntry.get()=='root'and passwordEntry.get()=="12345":
+    elif usernameEntry.get()=='root'and database.connectdatabase(passwordEntry.get())==True:
         messagebox.showinfo("Success","Login Successful")
         root.destroy()
         import ems

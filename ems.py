@@ -1,7 +1,17 @@
 from customtkinter import *
-from tkinter import ttk
+from tkinter import ttk,messagebox
 from PIL import Image
 from datetime import datetime
+import database
+#Functions
+def add_employee():
+    if idEntry.get()==''or nameEntry.get()=='' or phoneEntry.get()=='' or salaryEntry.get()=='':
+        messagebox.showerror("Error","All fields are required!")
+    elif database.id_exists(idEntry.get()):
+        messagebox.showerror("Error","Id already exists")
+    else:
+        database.insert(idEntry.get(),nameEntry.get(),phoneEntry.get(),roleBox.get(),genderBox.get(),salaryEntry.get())
+        messagebox.showinfo("Added","Employee added Successfully!")
 
 #GUI 
 window  = CTk()

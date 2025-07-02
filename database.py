@@ -44,7 +44,6 @@ def updatedata(id,name,phone,role,gender,salary):
     conn.commit()
 def delete(id):
     mycursor.execute('DELETE FROM data WHERE Id=%s',id)
-    mycursor.fetchall()
     conn.commit()
 def deleteall():
     mycursor.execute('Truncate table data')

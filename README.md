@@ -7,7 +7,7 @@ It provides a user-friendly interface to manage employee records, including addi
 
 ## 🚀 Features
 
-✅ **Login System**
+✅ **Login System** 
 
 - Secure login with MySQL root password validation.
 
